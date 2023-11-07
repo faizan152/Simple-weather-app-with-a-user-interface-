@@ -1,0 +1,15 @@
+import unittest
+from weather_app import fetch_weather
+
+class TestWeatherApp(unittest.TestCase):
+    def test_fetch_weather(self):
+        chicago_weather = fetch_weather("Chicago")
+        self.assertEqual(chicago_weather, "Expected weather for Chicago")
+
+        new_york_weather = fetch_weather("New York")
+        self.assertEqual(new_york_weather, "Expected weather for New York")
+
+  
+
+if __name__ == '__main__':
+    unittest.main()
